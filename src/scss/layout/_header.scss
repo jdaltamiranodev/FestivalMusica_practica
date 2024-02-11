@@ -6,20 +6,52 @@
 
     h1 {
         color: v.$blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+    .contenido-header {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 
 .navegacion-principal {
-    background-color: red;
-    @include m.telefono {
-        
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
     }
     a {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
         color: v.$blanco;
         font-size: 2.4rem;
-    }
-
-    &:hover {
-        color: v.$amarillo;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
+        &:hover {
+            color: v.$amarillo;
+        }
     }
 }
+
+/* Forma de usar los mixins */
+    /* @include m.telefono {
+        background-color: blue;
+    }
+    @include m.tablet {
+        background-color: cornflowerblue;
+    }
+    @include m.desktop {
+        background-color: darkgreen;
+    }
+    @include m.desktopXL {
+        background-color: white;
+    } */
