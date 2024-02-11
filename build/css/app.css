@@ -356,12 +356,57 @@ h3 {
 }
 .header h1 {
   color: #FFFFFF;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 0;
+  }
+}
+.header .contenido-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
+@media (min-width: 768px) {
+  .navegacion-principal {
+    display: flex;
+    gap: 2rem;
+  }
+}
 .navegacion-principal a {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
   color: #FFFFFF;
   font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
-.navegacion-principal:hover {
+@media (min-width: 768px) {
+  .navegacion-principal a {
+    margin: 0;
+  }
+}
+.navegacion-principal a:hover {
   color: #FEF46D;
 }
+
+/* Forma de usar los mixins */
+/* @include m.telefono {
+    background-color: blue;
+}
+@include m.tablet {
+    background-color: cornflowerblue;
+}
+@include m.desktop {
+    background-color: darkgreen;
+}
+@include m.desktopXL {
+    background-color: white;
+} */
